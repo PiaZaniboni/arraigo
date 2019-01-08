@@ -1,0 +1,505 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Tipografia
+--------------------------------------------------------------*/
+*{-webkit-font-smoothing: antialiased;  -moz-osx-font-smoothing: grayscale; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+
+@font-face {
+    font-family: 'pangramextralight';
+    src: url('font/pangram-extralight-webfont.woff2') format('woff2'),
+         url('font/pangram-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pangramlight';
+    src: url('font/pangram-light-webfont.woff2') format('woff2'),
+         url('font/pangram-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pangrammedium';
+    src: url('font/pangram-medium-webfont.woff2') format('woff2'),
+         url('font/pangram-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pangramregular';
+    src: url('font/pangram-regular-webfont.woff2') format('woff2'),
+         url('font/pangram-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baskerville';
+    src: url('font/Baskerville-Italic.woff2') format('woff2'),
+        url('font/Baskerville-Italic.woff') format('woff'),
+        url('font/Baskerville-Italic.ttf') format('truetype'),
+        url('font/Baskerville-Italic.svg#Baskerville-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+/*--------------------------------------------------------------
+# Normalizes
+--------------------------------------------------------------*/
+html {
+    display: block;
+    height: 100%;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    background-color: #ffffff;
+    color: #565651;
+    display: block;
+    font-family: 'pangramregular', sans-serif;
+    height: 100%;
+    line-height: 1;
+}
+ol, ul, li {
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a,
+a:hover,
+a:link,
+a:visited,
+a:focus {
+    color: #444444;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+:focus {
+    outline: none;
+}
+
+
+/*NAV*/
+.main-nav{
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    float: left;
+    z-index: 999;
+    padding: 50px 60px;
+    -webkit-transition: all ease 250ms;
+    transition: all ease 250ms;
+}
+
+.navbar-logo{
+    display: block;
+    width: 120px;
+}
+
+.nav-collapse{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+.nav-collapse a{
+    font-family: 'pangramregular';
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 20px 0;
+    letter-spacing: 2px;
+    color: #565651;
+    transition: all ease 250ms;
+}
+
+.nav-collapse a span:after, .nav-redes a span.btn-redes:after {
+    content: '';
+    background: transparent;
+    display: block;
+    margin: auto;
+    width: 0;
+    height: 1px;
+    -webkit-transition: width 0.4s ease, background-color 0.4s ease;
+    transition: width 0.4s ease, background-color 0.4s ease;
+    position: relative;
+    bottom: 0;
+}
+
+.nav-collapse a:hover span:after,
+.nav-redes a:hover span.btn-redes:after,
+.nav-collapse a:hover.active span:after,
+.nav-redes a:hover.active span.btn-redes:after
+{
+    background-color: #B7A018;
+    width:100%;
+}
+
+.nav-collapse a.active span:after,
+.nav-redes a.active span.btn-redes:after{
+    background-color: #565651;
+    width:100%;
+}
+
+.nav-collapse a:hover{
+    color:#B7A018;
+}
+
+.nav-redes{
+    position: absolute;
+    bottom: 90px;
+    left: 60px;
+    font-family: 'Baskerville';
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+.nav-redes a{
+    color: #565651;
+}
+
+.nav-redes a:hover{
+    color: #B7A018;
+}
+
+.logo-svg path, .logo-svg rect {
+    fill: rgb(86,86,81) !important;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+.logo-svg:hover path, .logo-svg:hover rect {
+    fill: rgb(183,160,24) !important;
+}
+
+/*Seccion*/
+.contenedor-seccion {
+    width: 100%;
+    float: left;
+    padding: 50px 60px;
+    padding-left: 25%;
+    position: relative;
+    /*margin-bottom: 50px;*/
+}
+
+#inicio, #contacto{
+    height: 100%;
+}
+
+/*Seccion home */
+.logo-central{
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+/*Seccion arquitectura*/
+.proyectos{
+    display: block;
+    width: 31.3%;
+    margin: 0 1% 20px;
+    float: left;
+}
+
+.proyectos .imagen{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 10px;
+}
+
+.proyectos h2,.proyecto h2{
+    font-family: 'pangramregular';
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.proyecto h2{
+    margin-bottom: 5px !important;
+}
+
+.proyecto p{
+    font-family: 'pangramregular';
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.proyecto img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/*ESTUDIO*/
+img.estudio{
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+.estudio-texto{
+    width: 50%;
+    float: right;
+    padding: 0 50px; /*padding: 0 90px; 1920 */
+}
+
+.estudio-texto h2{
+    font-family: 'pangramregular';
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.estudio-texto p{
+    font-family: 'pangramregular';
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+@media all and (min-width: 1000px){
+    .estudio-texto .caja{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: 50px;
+    }
+}
+
+/*CONTACTO*/
+img.contacto{
+    width: 100%;
+}
+
+@media all and (min-width: 900px){
+    .contacto-texto{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+    }
+}
+
+.contacto-texto span.hola{
+    font-family: 'Baskerville';
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    position: relative;
+    border-bottom: 1px solid #565651;
+}
+
+.contacto-texto .caja-info.top{
+    margin-top: 60px;
+}
+
+.contacto-texto .caja-info{
+    margin-bottom: 50px;
+}
+
+.contacto-texto .caja-info span{
+    font-family: 'pangramregular';
+    display: block;
+    line-height: 26px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.contacto-texto .caja-info span.title{
+    font-family: 'pangrammedium';
+}
+
+.caja-contacto{
+    border-top: 50px solid transparent;
+    padding-top: 15px;
+    -webkit-border-image: url(../img/contacto-top.svg) 60 round; /* Safari 3.1-5 */
+    -o-border-image: url(../img/contacto-top.svg) 60 round; /* Opera 11-12.1 */
+    border-image: url(../img/contacto-top.svg) 60 round;
+    /* border-image-repeat: repeat;*/
+}
+
+@media screen and (max-width: 1700px){
+    .proyectos .imagen{
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 1400px){
+    .proyectos .imagen{
+        height: 200px;
+    }
+    .logo-central{
+        width: 500px;
+    }
+}
+
+@media all and (max-width: 1030px){
+    /*Arquitectura*/
+    .proyectos{
+        width: 48%;
+    }
+    .contenedor-seccion#contacto, .contenedor-seccion#estudio {
+        padding-left: 27%;
+    }
+    .logo-central{
+        width: 400px;
+    }
+}
+@media all and (max-width: 1000px){
+    img.estudio{
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    .estudio-texto {
+        width: 100%;
+        float: none;
+        padding: 0px 0px 25px;
+    }
+}
+
+/* Tablet - Mobile */
+@media all and (max-width: 900px){
+    /*NAV*/
+    .main-nav{
+        width: 100%;
+        background-color: #ffffff;
+        left: -100%;
+    }
+    .main-nav.show{
+        left: 0;
+    }
+    .btn-icon-close{
+        display: block !important;
+        position: absolute;
+        right: 60px;
+        top: 34px;
+        width: 25px;
+    }
+    .nav-responsive{
+        display: block !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 8px 60px;
+        z-index: 99;
+        background-color: #ffffff;
+    }
+    .nav-responsive .logo{
+        float: left;
+    }
+    .nav-responsive .btn-icon-bar{
+        position: absolute;
+        right: 60px;
+        top: 34px;
+    }
+
+    /*Inicio*/
+    .logo-central {
+        left: 50%;
+        width: 300px;
+    }
+    .contenedor-seccion {
+        padding-left: 60px;
+        padding-top: 100px;
+    }
+    .contenedor-seccion#contacto, .contenedor-seccion#estudio  {
+        padding-left: 60px;
+    }
+
+    .contacto-texto{
+        margin-top: 50px;
+    }
+    .navbar-logo{
+        width: 100px;
+        margin-top: 5px;
+    }
+}
+
+@media all and (max-width: 600px){
+    /*Arquitectura*/
+    .proyectos{
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .proyectos .imagen {
+        height: 250px;
+    }
+    .logo-central {
+        width: 250px;
+    }
+}
+
+@media all and (max-width: 480px){
+    .nav-responsive {
+        padding: 8px 30px;
+    }
+    .contenedor-seccion, .contenedor-seccion#contacto, .contenedor-seccion#estudio  {
+        padding: 100px 30px 50px;
+        padding-left: 30px;
+    }
+    .nav-responsive .btn-icon-bar, .btn-icon-close {
+        right: 30px;
+    }
+}
