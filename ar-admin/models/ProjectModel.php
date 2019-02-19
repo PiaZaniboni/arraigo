@@ -10,7 +10,7 @@ class ProjectModel {
      */
 	public function getProjects(){
 		$projects = array();
-		$sql = "SELECT * FROM project ORDER BY id_project DESC";
+		$sql = "SELECT * FROM project NATURAL JOIN project_order ORDER BY project_order DESC";
 		$res = DB::query($sql);
 		while($row = mysqli_fetch_assoc($res)){
 			$projects[] = new Project (
@@ -37,7 +37,7 @@ class ProjectModel {
      * @return Project
      */
 	public function getProject($idProject){
-		$sql = "SELECT * FROM project WHERE id_project = '" . $idProject . "'";
+		$sql = "SELECT * FROM project NATURAL JOIN project_order WHERE id_project = '" . $idProject . "' ORDER BY project_order DESC";
 		$res = DB::query($sql);
 		$row = mysqli_fetch_assoc($res);
 		$project = new Project (
@@ -276,6 +276,34 @@ class ProjectModel {
 			SET project_frame = NULL" . 
 			", project_frame_type = ''" .
 			"WHERE id_project = '" . $idProject . "'";
+		return DB::query($sql);
+	}
+
+	/**
+     * Add a projet order to the database.
+     *
+     * @param $idProject
+     * @return integer
+     */
+	public function addProjectOrder($idProject){
+		$sql = "SELECT MAX(project_order) FROM project_order";
+		DB::query($sql);
+		$res = DB::query($sql);
+		$row = mysqli_fetch_assoc($res);
+		$lastProjectOrder = $row["MAX(project_order)"];
+		$sql = "INSERT INTO project_order (id_project, project_order) VALUES ('" . $idProject . "', '" . ($lastProjectOrder + 1) . "')";
+		DB::free($res);
+		return DB::query($sql);
+	}
+
+	/**
+     * Delete a project saved in the database.
+     *
+     * @param integer $idProject
+     * @return integer
+     */
+	public function deleteProjectOrder($idProject){
+		$sql = "DELETE FROM project_order WHERE id_project = '" . $idProject . "'";
 		return DB::query($sql);
 	}
 

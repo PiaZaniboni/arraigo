@@ -72,6 +72,10 @@ class ProjectController extends Controller {
 					$lastId = getLastId("project");
 					$arrayFiles = $_FILES["project_image"];
 
+					if($res){
+						$this->actualModel->addProjectOrder($lastId);
+					}
+
 					if($res && $arrayFiles){
 						for($i = 0; $i < count($arrayFiles["name"]); $i++){
 							if($arrayFiles["error"][$i] === 0){
@@ -148,6 +152,7 @@ class ProjectController extends Controller {
 				
 				$this->actualModel->deleteProjectGallery($_GET["id_project"]);
 				$this->actualModel->deleteProject($_GET['id_project']);
+				$this->actualModel->deleteProjectOrder($_GET['id_project']);
 
 				$this->createLoadingView();
 				$this->actualView->render();
