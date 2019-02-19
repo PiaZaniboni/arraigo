@@ -9,7 +9,7 @@ function connect(){
 	if($_SERVER["HTTP_HOST"] === "localhost"){
 		return mysqli_connect("localhost", "root", "", "arraigo-db");
 	} else {
-		return mysqli_connect("localhost", "", "", "");
+		return mysqli_connect("localhost", "c1490668_arraigo", "TItomana77", "c1490668_arraigo");
 	}
 	/*if(mysqli_connect_errno()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();

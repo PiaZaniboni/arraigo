@@ -10,7 +10,7 @@ class AddView extends View {
      *
      * @return null
      */
-    public function render(Array $categories = null){
+    public function render(){
 
 ?>    
 
@@ -32,22 +32,6 @@ class AddView extends View {
                         </label>
                         <input name="project_name" type="text" required /> 
                     </div>
-
-                    <!--<div>
-                        <label for="id_category">
-                            Categor&iacute;a <small>(*)</small>
-                        </label>
-                        <select name="id_category" required>
-                            <option value="" selected>
-                                Seleccionar
-                            </option>
-                            <?php foreach($categories as $category){ ?>
-                            <option value="<?php echo $category->getIdCategory() ?>">
-                                <?php echo $category->getCategory() ?>
-                            </option>
-                            <?php } ?>
-                        </select>
-                    </div>-->
 
                     <div>
                         <label for="project_description">

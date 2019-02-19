@@ -46,10 +46,9 @@ class ProjectController extends Controller {
 				if(empty($_POST)){
 
 					$this->createModel();
-					$categories = $this->actualModel->getCategories();
 
 					$this->createView($this->petitionAction);
-					$this->actualView->render($categories);
+					$this->actualView->render();
 
 				} else {
 					
@@ -111,10 +110,9 @@ class ProjectController extends Controller {
 					$this->createModel();
 					
 					$project = $this->actualModel->getProject($_GET["id_project"]);
-					$categories = $this->actualModel->getCategories();
 
 					$this->createView($this->petitionAction);
-					$this->actualView->render($categories, $project);
+					$this->actualView->render($project);
 
 				} else {
 					

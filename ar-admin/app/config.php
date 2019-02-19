@@ -16,12 +16,12 @@ if($_SERVER["HTTP_HOST"] === "localhost"){
 	define("DB_PASSWORD", "");
 	define("ACTIVATE_URL_FRIENDLY", false);
 } else {
-	define("WEB_PATH", "");
-	define("APP_PATH", "");
+	define("WEB_PATH", "http://www.estudioarraigo.com.ar");
+	define("APP_PATH", "http://www.estudioarraigo.com.ar/ar-admin");
 
-	define("DB_NAME", "");
-	define("DB_USER", "");
-	define("DB_PASSWORD", "");
+	define("DB_NAME", "c1490668_arraigo");
+	define("DB_USER", "c1490668_arraigo");
+	define("DB_PASSWORD", "TItomana77");
 
 	define("ACTIVATE_URL_FRIENDLY", false);
 }

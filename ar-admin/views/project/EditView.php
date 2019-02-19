@@ -10,7 +10,7 @@ class EditView extends View {
      *
      * @return null
      */
-    public function render(Array $categories = null, Project $project = null){
+    public function render(Project $project = null){
 
 ?>  
     
@@ -32,32 +32,6 @@ class EditView extends View {
                         </label>
                         <input name="project_name" type="text" value="<?php echo $project->getProjectName() ?>" required /> 
                     </div>
-
-                    <!--<div>
-                        <label for="id_category">
-                            Categor&iacute;a <small>(*)</small>
-                        </label>
-                        <select name="id_category" required>
-                            <option value="" selected>
-                                Seleccionar
-                            </option>-->
-                            <?php 
-                            //foreach($categories as $category){ 
-                                //if($category->getIdCategory() === $project->getIdCategory()){
-                            ?>
-                            <!--<option value="<?php //echo $category->getIdCategory() ?>" selected>
-                                <?php //echo $category->getCategory() ?>
-                            </option>
-                            <?php //} else { ?>
-                            <option value="<?php //echo $category->getIdCategory() ?>">
-                                <?php //echo $category->getCategory() ?>
-                            </option>
-                            <?php
-                                //}
-                            //}
-                            ?>
-                        <!--</select>
-                    </div>-->
 
                     <div>
                         <label for="project_description">
