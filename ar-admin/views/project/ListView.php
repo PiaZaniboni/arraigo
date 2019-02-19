@@ -30,6 +30,31 @@ class ListView extends View {
       </div>
     </div>
 
+    <!-- JQUERY UI -->  
+    
+    <link type="text/css" rel="stylesheet" href="<?php echo APP_PATH ?>/css/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo APP_PATH ?>/css/jquery-ui.theme.min.css">
+    <script type="text/javascript" src="<?php echo APP_PATH ?>/js/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".sortable").sortable({
+                update: function(e, ui) {
+                    var arr = [];
+
+                    $.each($(this).find("tr"), function(key, value){
+                        arr.push($(this).attr("data-id-project"));
+                    });
+
+                    $.get('app/_projects_order.php?ids=' + JSON.stringify(arr), function(data){
+                        if(response.status === "Success"){
+                            alert("Done");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
     <?php if(empty($projects)){ ?>
     
     <p> No hay proyectos cargados/as por el momento. </p>
@@ -64,9 +89,9 @@ class ListView extends View {
             </tr>
         </thead>
         
-        <tbody>       	
+        <tbody class="sortable">       	
 			<?php foreach($projects as $project){ ?>
-            <tr>
+            <tr data-id-project="<?php echo $project->getIdProject() ?>">
                 <td>
                 	<?php echo $project->getProjectName() ?>
                 </td>

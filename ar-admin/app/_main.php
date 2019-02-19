@@ -61,4 +61,14 @@ function getProject($idProject){
 	return $project;
 }
 
+/**
+ * Save products order.
+ *
+ * @return array
+ */
+function saveProjectOrder($i, $idProject){
+	$sql = "UPDATE project_order SET project_order = '" . $i . "' WHERE id_project = '" . $idProject . "'";
+	query($sql);
+}
+
 ?>
