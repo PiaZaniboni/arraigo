@@ -230,6 +230,7 @@ a:focus {
     padding: 50px 60px;
     padding-left: 25%;
     position: relative;
+    min-height: 100%;
     /*margin-bottom: 50px;*/
 }
 
@@ -304,22 +305,33 @@ img.estudio{
 
 .estudio-texto h2{
     font-family: 'pangramregular';
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 17px;
+    line-height: 22px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.estudio-texto h2.segundo{
+    margin-top: 50px;
 }
 
 .estudio-texto p{
     font-family: 'pangramregular';
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 13px;
+    line-height: 25px;
     letter-spacing: 2px;
 }
 
-@media all and (min-width: 1000px){
-    .estudio-texto .caja{
+.estudio-texto p span{
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: 'Baskerville';
+    display: block;
+}
+
+@media all and (min-width: 1025px){
+    .caja-estudio{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -335,8 +347,26 @@ img.contacto{
 @media all and (min-width: 900px){
     .contacto-texto{
         position: absolute;
-        top: 55%;
+        top: 50%;
         transform: translateY(-50%);
+    }
+}
+
+@media all and (max-width: 1400px){
+    .estudio-texto p span{
+        margin-top: 10px;
+    }
+    .estudio-texto h2.segundo {
+        margin-top: 30px;
+    }
+    .estudio-texto {
+        width: 55%;
+    }
+    img.estudio {
+        width: 45%;
+    }
+    .estudio-texto h2 {
+        margin-bottom: 12px;
     }
 }
 
@@ -370,12 +400,7 @@ img.contacto{
 }
 
 .caja-contacto{
-    border-top: 50px solid transparent;
     padding-top: 15px;
-    -webkit-border-image: url(../img/contacto-top.svg) 60 round; /* Safari 3.1-5 */
-    -o-border-image: url(../img/contacto-top.svg) 60 round; /* Opera 11-12.1 */
-    border-image: url(../img/contacto-top.svg) 60 round;
-    /* border-image-repeat: repeat;*/
 }
 
 @media screen and (max-width: 1700px){
@@ -405,7 +430,7 @@ img.contacto{
         width: 400px;
     }
 }
-@media all and (max-width: 1000px){
+@media all and (max-width: 1025px){
     img.estudio{
         width: 100%;
         height: auto;

@@ -45,17 +45,20 @@
 <!-- Estudio -->
 <div  class="contenedor-seccion" id="estudio">
 
+    <div class="caja-estudio">
+        <div class="estudio-texto">
+            <div class="caja">
+                <h2 class="titulo">NUESTRO ESTUDIO</h2>
+                <p class="descripcion">Somos arraigo, un estudio de arquitectura en donde desarrollamos diferentes proyectos y obras desde el año 2011.</br> Elegimos el nombre Arraigo ya que nos sentimos identificados con su significado, nos une nuestro apellido y la pasión por la profesión.
+                </br><span>“Arraigo es el acto y la consecuencia de arraigar: afincarse de modo permanente, afianzarse, ganar firmeza o echar raíces.”</span></p>
 
-    <div class="estudio-texto">
-        <div class="caja">
-            <h2 class="titulo">El Estudio</h2>
-            <p class="descripcion"> Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                Fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                Fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut. Fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut. Skjshksjhds. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                <h2 class="titulo segundo">PRESTACIONES</h2>
+                <p class="descripcion">Realizamos un desarrollo integral, abarcando las diferentes instancias de proyectos, dirección y ejecución de obras de arquitectura, principalmente en desarrollos de viviendas de diferentes escalas y complejidades.</br> Nuestras propuestas se caracterizan por la calidad espacial, su funcionalidad, materialidad e innovación, desarrollando un lenguaje propio.</p>
+            </div>
         </div>
-    </div>
 
         <img class="estudio" src="img/estudio.jpg" title="estudio" alt="estudio" />
+    </div>
 
 </div>
 

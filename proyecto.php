@@ -1,3 +1,12 @@
+<?php
+require_once("requests/_main.php");
+$idProyecto = $_GET['p'];
+$idImagenes = getIdImages($idProyecto);
+$proyecto = getProject($idProyecto);
+//var_dump($idImagenes);
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -45,15 +54,19 @@
 <!-- Arquitectura -->
 <div  class="contenedor-seccion">
 
-
-
     <!-- Proyecto -->
     <div class="proyecto">
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-        <p class="descripcion"> Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-Fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut. </p>
-        <img src="img/proyecto.jpg" title="proyecto" alt="proyecto" />
+        <h2 class="titulo"><?php echo $proyecto['project_name'] ;?></h2>
+        <h2 class="anip"><?php echo $proyecto['project_year'] ;?></h2>
+        <p class="descripcion"> <?php echo $proyecto['project_description'] ;?> </p>
+
+        <!--<img src="img/proyecto.jpg" title="proyecto" alt="proyecto" />-->
+        <img style="width:100%;" src="requests/_getImageProject.php?id_project=<?php echo $proyecto['id_project'] ?>" alt="imagen_portada" title="imagen_portada">
+
+        <?php foreach( $idImagenes as $idImagen ){ ?>
+            <img style="width:100%;" src="requests/_getGalleryImage.php?id_project_image=<?php echo $idImagen['id_project_image']; ?>" title="proyecto_<?php echo $idImagen['id_project_image']; ?>" alt="proyecto_<?php echo $idImagen['id_project_image']; ?>" >
+        <?php }?>
+
     </div>
 
 </div>
