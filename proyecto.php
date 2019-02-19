@@ -21,9 +21,9 @@
 		</div>
 
 		<div class="nav-redes">
-			<a class="btn-instagram" href="https://www.instagram.com" target="_blank"><span class="btn-redes">instagram</span></a>
+			<a class="btn-instagram" href="https://www.instagram.com/estudioarraigo/" target="_blank"><span class="btn-redes">instagram</span></a>
 			<span style="padding: 0px 10px;">/</span>
-			<a class="btn-facebook" href="https://www.facebook.com" target="_blank"><span class="btn-redes" >facebook</span></a>
+			<a class="btn-facebook" href="https://www.facebook.com/estudioarraigo/" target="_blank"><span class="btn-redes" >facebook</span></a>
 		</div>
 
 

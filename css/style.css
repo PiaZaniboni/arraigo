@@ -199,10 +199,10 @@ a:focus {
 
 .nav-redes{
     position: absolute;
-    bottom: 90px;
+    bottom: 60px;
     left: 60px;
     font-family: 'Baskerville';
-    font-size: 19px;
+    font-size: 17px;
     letter-spacing: 1px;
 }
 .nav-redes a{

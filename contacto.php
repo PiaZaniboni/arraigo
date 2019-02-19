@@ -21,9 +21,9 @@
 		</div>
 
 		<div class="nav-redes">
-			<a class="btn-instagram" href="https://www.instagram.com" target="_blank"><span class="btn-redes">instagram</span></a>
+			<a class="btn-instagram" href="https://www.instagram.com/estudioarraigo/" target="_blank"><span class="btn-redes">instagram</span></a>
 			<span style="padding: 0px 10px;">/</span>
-			<a class="btn-facebook" href="https://www.facebook.com" target="_blank"><span class="btn-redes" >facebook</span></a>
+			<a class="btn-facebook" href="https://www.facebook.com/estudioarraigo/" target="_blank"><span class="btn-redes" >facebook</span></a>
 		</div>
 
 
@@ -51,11 +51,11 @@
 
             <div class="caja-info top">
                 <span class="title">ARQ. MARTIN PIOMBO</span>
-                <span>0221 155990454</span>
+                <span>221 541 8929</span>
             </div>
             <div class="caja-info">
                 <span class="title">ARQ. RAMIRO PIOMBO</span>
-                <span>0221 155990454</span>
+                <span>221 476 6157</span>
             </div>
             <div class="caja-info">
                 <span class="title">EMAIL</span>
