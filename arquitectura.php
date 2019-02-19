@@ -1,3 +1,9 @@
+<?php
+require_once("requests/_main.php");
+$proyectos = getProyectos();
+//var_dump($proyectos);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -46,76 +52,22 @@
 <div  class="contenedor-seccion">
 
     <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
+    <!--<a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
         <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
         <h2 class="titulo">CASA A9</h2>
         <h2 class="anip">2018</h2>
-    </a>
+    </a>-->
 
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
-    <!-- Proyecto -->
-    <a class="proyectos" href="proyecto.php" alt="proyecto" title="proyecto">
-        <div style="background-image:url('img/proyecto.jpg')" class="imagen"></div>
-        <h2 class="titulo">CASA A9</h2>
-        <h2 class="anip">2018</h2>
-    </a>
+    <?php
+    foreach( $proyectos as $proyecto ){ ?>
+        <a class="proyectos" href="proyecto.php?p=<?php echo $proyecto['id_project'] ;?>" alt="proyecto" title="proyecto">
+            <div class="imagen">
+                <img style="width:100%;" src="requests/_getImageProject.php?id_project=<?php echo $proyecto['id_project'] ?>" alt="">
+            </div>
+            <h2 class="titulo"><?php echo $proyecto['project_name'] ;?></h2>
+            <h2 class="anip"><?php echo $proyecto['project_year'] ;?></h2>
+        </a>
+    <?php } ?>
 
 </div>
 

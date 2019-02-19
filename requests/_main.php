@@ -9,8 +9,9 @@ function connect(){
 	if($_SERVER["HTTP_HOST"] === "localhost"){
 		return mysqli_connect("localhost", "root", "", "arraigo-db");
 	} else {
-		return mysqli_connect("localhost", "root", "", "arraigo-db");
+		return mysqli_connect("localhost", "c1490668_arraigo", "TItomana77", "c1490668_arraigo");
 	}
+
 	/*if(mysqli_connect_errno()){
 		echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}*/
@@ -106,26 +107,6 @@ function getImageProject($idProject){
  *
  * @param integer $idProject
  * @return ID
- function getProyectos(){
- 	$proyectos = array();
- 	$sql = "SELECT * FROM project ORDER BY id_project ASC";
- 	$res = query($sql);
- 	while($row = mysqli_fetch_assoc($res)){
- 		$proyectos[] = array (
-             "id_project" => $row['id_project'],
-     		"project_name" => $row['project_name'],
-             "project_year" => $row['project_year'],
-     		"project_description" => $row['project_description'],
-     		"project_frame" => $row['project_frame'],
-     		"project_frame_type" => $row['project_frame_type']
- 		);
- 	}
- 	free($res);
- 	return $proyectos;
- }
-
-
-
  */
 function getIdImages($id_project){
 	$ids = array();
