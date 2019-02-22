@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-02-2019 a las 22:06:01
+-- Tiempo de generación: 22-02-2019 a las 16:59:47
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `project` (
   `project_frame` mediumblob NOT NULL,
   `project_frame_type` varchar(20) NOT NULL,
   PRIMARY KEY (`id_project`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `project_image` (
   `project_image` mediumblob NOT NULL,
   `type_image` varchar(25) NOT NULL,
   PRIMARY KEY (`id_project_image`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `project_order` (
   `id_project` int(11) NOT NULL AUTO_INCREMENT,
   `project_order` int(11) NOT NULL,
   PRIMARY KEY (`id_project`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
